@@ -1,6 +1,6 @@
 import { Game } from "../../models/Game";
 import "./GameBoard.scss";
-import front from '../../assets/front.png'
+import front from "../../assets/front.png";
 
 export const GameBoard = () => {
   const frontCards: Game[] = [
@@ -18,15 +18,17 @@ export const GameBoard = () => {
     { img: front, name: "front", flipped: false },
   ];
 
-
   return (
     <>
-      <div className="game">
+      <div className="game--wrapper">
         <h1>Dog memory</h1>
-        <div>
-            {frontCards.map((front) => <div>
-                <img src={front.img} className="frontCard"/>
-            </div>)}
+        <div className="stats">
+          <h2>Poäng: 0</h2> <h2>Tid: 0 s</h2>
+        </div>
+        <div className="game">
+          {frontCards.map((front) => (
+            <img src={front.img} className="frontCard" />
+          ))}
         </div>
       </div>
     </>
