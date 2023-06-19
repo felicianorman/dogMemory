@@ -1,62 +1,39 @@
 .game--wrapper {
-  width: 700px;
-  height: auto;
-  background-color: #faf3fa;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  .stats {
-    font-family: "Annie Use Your Telescope", cursive;
-    display: flex;
-    color: #8b6a6a;
-    justify-content: space-around;
-    width: 100%;
-
-    h2 {
-      font-weight: lighter;
-      margin: 0;
-      padding: 0;
-    }
-  }
+  border: 1px solid red;
+  height: 100vh;
 
   h1 {
-    font-family: "Annie Use Your Telescope", cursive;
-    color: #8b6a6a;
-    font-size: 2.8em;
-    font-weight: lighter;
+    margin: 0;
     text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
   }
+}
 
-  .game {
-    border: 1px solid green;
-    display: flex;
-    // align-items: center;
-    // flex-direction: column;
-    // justify-content: center;
-    // flex-direction: row;
-    // flex-wrap: wrap;
+.stats {
+  border: 1px solid blue;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.game {
+  border: 1px solid green;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  flex-direction: row;
+  gap: 10px;
+
+  .card {
+    width: 157px;
     position: relative;
-
-    .card {
-        border: 1px solid red;
-        position: absolute;
-    }
 
     .frontCard,
     .backCard {
-      width: 157px;
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   margin: 0;
-    //   padding: 0;
-    //   margin: 10px;
-    //   box-shadow: 5px 1px 5px 1px rgba(145, 100, 100, 0.5);
-    //   border: none;
-    //   border-radius: 15px;
+      width: 100%;
+    }
+
+    .backCard {
+      position: absolute;
     }
   }
 }
