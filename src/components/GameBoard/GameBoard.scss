@@ -1,0 +1,16 @@
+.game {
+    width: 550px;
+    height: 500px;
+    border: 3px solid rgba($color: #876D7C, $alpha: 0.5) ;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    background-color: #FAF3FA;
+
+    h1 {
+        font-family: 'Annie Use Your Telescope', cursive;
+        color: #8B6A6A;
+        font-size: 2.4em;
+        font-weight: lighter;
+    }
+}
