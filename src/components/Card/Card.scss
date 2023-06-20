@@ -1,0 +1,38 @@
+.card {
+  width: 157px;
+  position: relative;
+}
+
+.frontCard,
+.backCard {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 1px 5px 1px rgba(145, 100, 100, 0.5);
+  width: 157px;
+  height: 195px;
+}
+
+.backCard {
+  position: absolute;
+  transform: rotateY(90deg);
+  transition: transform ease-in 0.2s;
+}
+
+.flipped {
+  .backCard {
+    transform: rotateY(0deg);
+    transition-delay: 0.2s;
+  }
+}
+
+.frontCard {
+  transition: transform ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+.flipped {
+  .frontCard {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+  }
+}
