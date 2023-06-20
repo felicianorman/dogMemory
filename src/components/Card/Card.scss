@@ -1,0 +1,27 @@
+.card {
+  width: 157px;
+  position: relative;
+
+  img {
+    display: block;
+  }
+}
+
+.frontCard,
+.backCard {
+  width: 100%;
+}
+
+.backCard {
+  position: absolute;
+  transform: rotateY(90deg);
+}
+
+.flipped {
+  border: 3px solid red;
+
+  .backCard {
+    transform: rotateY(0deg);
+  }
+ 
+}

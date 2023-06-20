@@ -22,18 +22,5 @@
   width: 500px;
   flex-direction: row;
   gap: 10px;
-
-  .card {
-    width: 157px;
-    position: relative;
-
-    .frontCard,
-    .backCard {
-      width: 100%;
-    }
-
-    .backCard {
-      position: absolute;
-    }
-  }
+  backface-visibility: hidden;
 }
