@@ -24,6 +24,13 @@ export const GameBoard = () => {
     { img: dog6, name: "dog5", flipped: false, id: Math.random() },
   ];
 
+  const shuffled = cards
+.map((value) => ({ value, sort: Math.random() }))
+.sort((a, b) => a.sort - b.sort)
+.map(({ value }) => value);
+
+console.log(shuffled)
+
   return (
     <>
       <div className="game--wrapper">
@@ -31,9 +38,9 @@ export const GameBoard = () => {
         <div className="stats">
           <h2>Poäng: 0</h2> <h2>Tid: 0 s</h2>
         </div>
-        
+
         <div className="game">
-          {cards.map((card) => (
+          {shuffled.map((card) => (
             <Card card={card}></Card>
           ))}
         </div>

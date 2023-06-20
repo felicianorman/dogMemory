@@ -11,7 +11,7 @@ export const Card = ({ card }: ICardProps) => {
     const [flipped, setFlipped] = useState(false)
 
     const handleClick = (name: string) => {
-        setFlipped(true)
+        setFlipped(!flipped)
         console.log(`Du har klickat på ${name}`)
     }
 
