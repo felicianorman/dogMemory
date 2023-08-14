@@ -25,11 +25,20 @@ export const GameBoard = () => {
   ];
 
   const shuffled = cards
-.map((value) => ({ value, sort: Math.random() }))
-.sort((a, b) => a.sort - b.sort)
-.map(({ value }) => value);
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
 
-console.log(shuffled)
+  const match = () => {
+    const gameCards = document.querySelectorAll(".card");
+
+    shuffled.forEach((item, index) => {
+      gameCards[index].setAttribute("name", item.name);
+    });
+
+    
+
+  };
 
   return (
     <>
@@ -41,7 +50,7 @@ console.log(shuffled)
 
         <div className="game">
           {shuffled.map((card) => (
-            <Card card={card}></Card>
+            <Card card={card} match={match}></Card>
           ))}
         </div>
       </div>
